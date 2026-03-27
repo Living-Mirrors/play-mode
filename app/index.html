@@ -190,11 +190,65 @@ footer{padding:36px 52px;display:flex;justify-content:space-between;align-items:
 .r.in{opacity:1;transform:translateY(0)}
 .r[data-d="1"]{transition-delay:.12s}.r[data-d="2"]{transition-delay:.24s}.r[data-d="3"]{transition-delay:.36s}
 
-@media(max-width:640px){nav{padding:22px 24px}.hero{padding:100px 28px 80px}.section{padding:64px 24px}
-  .pull-wrap{padding:56px 24px}.stat-band{flex-wrap:wrap;gap:28px;padding:56px 24px}
-  .volley-section,.game-section,.layers-section{padding:56px 20px 40px}
-  .ab-section{padding:40px 20px}.cta-section{padding:80px 24px}
-  footer{flex-direction:column;gap:14px;text-align:center;padding:28px 24px}}
+/* ─── MOBILE ─── */
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  .nav-links{gap:16px}
+  .nav-link{font-size:10px;letter-spacing:.25em}
+  .nav-logo{height:24px}
+}
+@media(max-width:640px){
+  nav{padding:14px 16px}
+  .nav-links{gap:12px}
+  .nav-link{font-size:9px;letter-spacing:.2em}
+
+  .hero{padding:90px 24px 60px;min-height:90vh}
+  .hero-ey{font-size:10px;letter-spacing:.4em;margin-bottom:28px}
+  .hero-sub{margin-top:16px;max-width:90%}
+  .hero-cta{margin-top:32px}
+  .vline{height:36px}
+
+  .section{padding:56px 20px}
+  .pull-wrap{padding:48px 20px}
+  .pull-quote{font-size:clamp(20px,5vw,28px)}
+
+  .stat-band{flex-wrap:wrap;gap:20px;padding:48px 20px}
+  .stat .num{font-size:clamp(32px,10vw,48px)}
+
+  .volley-section,.game-section,.layers-section{padding:48px 16px 36px}
+  .volley-section h2,.game-section h2{margin-bottom:28px}
+
+  /* Volley panels stack + shorter */
+  .volley-wrap .panel{height:320px}
+  .volley-wrap .panel .pl{font-size:11px;bottom:20px}
+  .volley-wrap .panel .ps{font-size:12px;bottom:4px}
+
+  /* Game canvas — shorter on mobile */
+  #game-c{height:50vh;min-height:300px;max-height:450px}
+  .game-detail .gd-n{font-size:22px}
+  .game-detail .gd-d{font-size:15px}
+  .game-nav button{font-size:10px;padding:8px 20px}
+
+  /* Layers canvas — shorter */
+  #layers-c{height:400px}
+  .ld-n{font-size:24px}
+
+  .ab-section{padding:32px 16px}
+  .cta-section{padding:64px 20px}
+  .cta-section h2{font-size:clamp(28px,8vw,44px)}
+  .cta-sub{font-size:17px}
+
+  footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px}
+}
+/* Extra small phones */
+@media(max-width:380px){
+  .hero h1{font-size:28px}
+  .hero-ey{font-size:9px;letter-spacing:.3em}
+  .nav-link{display:none}
+  #game-c{height:40vh;min-height:250px}
+  #layers-c{height:320px}
+  .volley-wrap .panel{height:260px}
+}
 </style>
 </head>
 <body>
@@ -408,7 +462,10 @@ document.querySelectorAll('.r').forEach(el=>obs.observe(el));
   let autoTimer=0;
 
   function rs(){w=c.width=window.innerWidth;h=c.height=window.innerHeight;
-    pL.bx=w*.22;pL.by=h*.5;pR.bx=w*.78;pR.by=h*.5;
+    // On mobile push players further out and shift vertically to avoid text overlap
+    const mob=w<700;
+    pL.bx=mob?w*.12:w*.22;pL.by=mob?h*.62:h*.5;
+    pR.bx=mob?w*.88:w*.78;pR.by=mob?h*.62:h*.5;
     if(!ball.active){pL.x=pL.bx;pL.y=pL.by;pR.x=pR.bx;pR.y=pR.by}}
 
   function easeArc(v){return Math.sin(v*Math.PI)}
@@ -421,8 +478,9 @@ document.querySelectorAll('.r').forEach(el=>obs.observe(el));
     ball.progress=0;
     ball.fromLeft=shotIndex%2===0;
     ball.speed=shot.spd;
-    ball.arcH=shot.arc;
-    ball.driftY=shot.drift;
+    const arcScale=w<700?.5:1; // smaller arcs on mobile
+    ball.arcH=shot.arc*arcScale;
+    ball.driftY=shot.drift*arcScale;
     ball.spinAmp=shot.spin;
     ball.trail=[];
     const src=ball.fromLeft?pL:pR;
@@ -645,7 +703,8 @@ function volleySim(id,type){
   function draw(){
     t+=.005;timer+=.005;
     ctx.clearRect(0,0,w,h);
-    const blx=w*.25,brx=w*.75,cy=h*.45;
+    const mob=w<400;
+    const blx=mob?w*.18:w*.25,brx=mob?w*.82:w*.75,cy=h*.42;
 
     if(type==='m'){
       // ─── MONOLOGUE: monotonous, lifeless, one-way ───
@@ -877,7 +936,8 @@ volleySim('volley-c','v');
   function rs(){
     const r=c.parentElement.getBoundingClientRect();
     w=c.width=Math.min(r.width,1100);h=c.height=Math.min(window.innerHeight*.7,700);
-    lx=w*.28;ly=h*.45;rx=w*.72;ry=h*.45;
+    const gMob=w<700;
+    lx=gMob?w*.15:w*.28;ly=h*.45;rx=gMob?w*.85:w*.72;ry=h*.45;
   }
 
   function launchVolley(){
@@ -895,7 +955,7 @@ volleySim('volley-c','v');
     updateDetail();
 
     // Stage-specific effects
-    if(stage===1) circleTargetR=Math.min(w,h)*.38; // Magic Circle
+    if(stage===1) circleTargetR=Math.min(w,h)*(w<700?.3:.38); // Magic Circle
     if(stage===2){launchVolley()} // Start volleying
     if(stage===4){targetLR=20;targetRR=20} // A Head Taller — both grow
     if(stage===6){
@@ -1154,8 +1214,8 @@ volleySim('volley-c','v');
 
   function draw(){
     ctx.clearRect(0,0,w,h);
-    const barH=44,gap=24,startY=(h-(L.length*(barH+gap)-gap))/2;
-    const barLeft=w*.18,barRight=w*.88,barW=barRight-barLeft;
+    const mob=h<500;const barH=mob?32:44,gap=mob?14:24,startY=Math.max(20,(h-(L.length*(barH+gap)-gap))/2);
+    const mobW=w<600;const barLeft=mobW?w*.22:w*.18,barRight=mobW?w*.95:w*.88,barW=barRight-barLeft;
 
     // Dial markers
     ctx.font='300 10px "Helvetica Neue",Arial,sans-serif';
@@ -1175,7 +1235,7 @@ volleySim('volley-c','v');
       const col=l.col;
 
       // Label
-      ctx.font=`${isA?'500':'300'} 16px "Cormorant Garamond",Georgia,serif`;
+      ctx.font=`${isA?'500':'300'} ${mobW?12:16}px "Cormorant Garamond",Georgia,serif`;
       ctx.textAlign='right';
       ctx.fillStyle=isA?`rgba(${col[0]},${col[1]},${col[2]},1)`:`rgba(40,35,28,${isH?.55:.3})`;
       ctx.fillText(l.n,barLeft-16,y+barH/2+6);
@@ -1233,7 +1293,7 @@ volleySim('volley-c','v');
   }
 
   function hitTest(mx,my){
-    const barH=44,gap=24,startY=(h-(L.length*(barH+gap)-gap))/2;
+    const mob=h<500;const barH=mob?32:44,gap=mob?14:24,startY=Math.max(20,(h-(L.length*(barH+gap)-gap))/2);
     for(let i=0;i<L.length;i++){
       const y=startY+i*(barH+gap);
       if(mx>w*.05&&mx<w*.95&&my>y-4&&my<y+barH+4) return i;
