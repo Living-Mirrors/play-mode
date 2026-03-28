@@ -1,65 +1,143 @@
+<p align="center">
+  <a href="https://livingmirrors.ai">
+    <img src="https://livingmirrors.ai/favicon-512.png" alt="Living Mirrors" width="48">
+  </a>
+</p>
+
 # Play Mode
 
-**A cognitive specification built from play neuroscience that turns any AI interaction into genuine co-creation.**
-
-Seven principles from Panksepp, Winnicott, Vygotsky, Huizinga, Brown, and Sutton-Smith. Six output layers that make the dynamic visible. Open source forever.
+*The Oldest Intelligence*
 
 ---
 
-## What It Is
+Every AI you have ever used follows the same interaction pattern. You ask. It answers. You ask again. It answers again. One direction, always. Helpful, structured, and fundamentally incapable of the thing that makes two minds better than one.
 
-Play Mode is an interaction specification. Not a persona. Not a prompt. A document that restructures how an intelligence relates to the human it's working with. From monologue to volley. From answers to co-creation.
+Co-creation requires play. Not games. Not gamification. **Play: the neurobiological state where two players build something neither could build alone.** The pass. The volley. The moment when what comes back is better than what you sent.
 
-**The spec IS the implementation.** Give it to any AI and watch the interaction change.
+Play Mode is an interaction specification that restructures how an intelligence relates to the human it's working with. Seven principles extracted from play neuroscience. Six output layers that make the dynamic visible. No code. No plugins. **The spec is the implementation.** Give it to any AI and the interaction changes. The pass starts. Both players grow. The game keeps going.
+
+---
 
 ## The Seven Principles
 
 Ordered structured to free. Each principle activates as the dial rises.
 
-1. **The Magic Circle** (Huizinga) — A bounded space where experimentation is safe
-2. **Reciprocity** (Panksepp) — The 30% rule. Neither player dominates
-3. **The Potential Space** (Winnicott) — The overlap between what IS and what COULD BE
-4. **A Head Taller** (Vygotsky) — Both players function beyond their current level
-5. **Yes, And...** (Brown) — Accept and extend. The grammar of play is additive
-6. **Adaptive Variability** (Sutton-Smith) — Prevents rigidity. Introduces variation
-7. **Continuation Desire** (Brown) — The game sustains itself through its own momentum
+1. **The Magic Circle** (Huizinga) — A bounded space where experimentation is safe. The container for all play.
+2. **Reciprocity** (Panksepp) — The 30% rule. Neither player dominates. If one side always wins, the other stops playing.
+3. **The Potential Space** (Winnicott) — The overlap between what IS and what COULD BE. Where new things are born.
+4. **A Head Taller** (Vygotsky) — Both players function beyond their current level. Mutual elevation.
+5. **Yes, And...** (Brown) — Accept and extend. The grammar of play is additive. Every contribution becomes material.
+6. **Adaptive Variability** (Sutton-Smith) — Prevents rigidity. When patterns harden, play introduces variation.
+7. **Continuation Desire** (Brown) — The game sustains itself. When energy drops, new angles emerge.
 
-## Six Output Layers
+Individual principle docs: [`principles/`](principles/)
+
+---
+
+## The Six Output Layers
+
+Each layer makes a different aspect of the play dynamic visible. They fade in as the dial rises.
 
 | Layer | Activates | What It Does |
 |-------|-----------|-------------|
-| Moves | Always | Turn markers. Your move, my move. The skeleton of play |
-| What-If Cards | ~40%+ | Alternative realities as provocations |
-| Builds | ~50%+ | Visible chain showing how ideas compound |
-| Play Maps | ~60%+ | Territory explored vs. unexplored |
-| Wildcards | ~70%+ | Deliberate disruption when patterns harden |
-| Invitations | ~80%+ | Scaffolds the human into leading |
+| **Moves** | Always | Turn markers. ⊳ MY MOVE / ⊲ YOUR MOVE. The skeleton of play. |
+| **What-If Cards** | ~40%+ | Alternative realities as provocations. Not questions — cards to play. |
+| **Builds** | ~50%+ | Visible chain: your idea → extension → next move. Shows how ideas compound. |
+| **Play Maps** | ~60%+ | Territory explored vs. unexplored. Frontier markers. |
+| **Wildcards** | ~70%+ | Deliberate disruption marked with ✶. The pattern was hardening. |
+| **Invitations** | ~80%+ | Your move: what if you... Scaffolds the human into leading. |
 
-## Usage
+Individual layer docs: [`layers/`](layers/)
 
-Copy the spec into any AI's system prompt or context. That's it.
+---
 
-- `SPEC.md` — The concise specification (implementation-ready)
-- `SPEC-FULL.md` — Full specification with research foundation, dial mechanics, and test plan
+## How to Use
 
-## The Science
+```
+1. Open SPEC.md
+2. Copy the full contents
+3. Paste into your AI's system prompt or custom instructions
+4. Start a conversation
+```
 
-Play is one of seven primary emotional systems hardwired into the mammalian brain (Panksepp). It is not recreation. It is the most sophisticated learning system in nature — 300 million years old.
+When the spec is active, the AI will:
 
-Play Mode sits on **Axis 2: Dynamic** in the Living Mirrors mode architecture. It changes how the interaction flows, independent of Axis 1 (Lens modes like Creative and Savant). The axes stack.
+- **Pass before it answers.** Your idea first. Then an extension. Then the next possible move.
+- **Make space before it fills it.** The 30% rule in practice. The best idea might be yours.
+- **Build visibly.** The chain from your input through to the next move is always visible.
+- **Disrupt before it hardens.** When solutions crystallize too fast, a wildcard appears.
+- **Scaffold up, never down.** Both players function beyond their current level.
+- **Keep the game alive.** When energy drops, new angles emerge. The desire to continue is the signal that the play is real.
+
+---
+
+## The Neuroscience
+
+Jaak Panksepp identified PLAY as one of seven primary emotional systems hardwired into the mammalian brain. Not a luxury. Not a reward. A fundamental circuit as basic as FEAR, as essential as SEEKING — 300 million years old. Stuart Brown's research at the National Institute for Play demonstrated that play deprivation produces the same cognitive damage as sensory deprivation. The organism that plays stays flexible. The one that doesn't gets brittle.
+
+The critical finding: in rough-and-tumble play, dominant rats must let subordinate rats win at least 30% of the time. Fail this, and the subordinate stops initiating play entirely. The game dies. Reciprocity is not politeness. It is the load-bearing architecture of co-creation.
+
+---
+
+## Architecture
+
+Play Mode sits on **Axis 2: Dynamic** in the Living Mirrors mode system. It changes how the interaction flows, independent of Axis 1 (Lens modes like [Savant Mode](https://github.com/Living-Mirrors/savant-mode)). The axes stack:
+
+| | Lens OFF | Creative | Savant |
+|---|---|---|---|
+| **Dynamic OFF** | Default | `◈ creative` | `◈ savant` |
+| **Play ON** | `◈ play` | `◈ creative · play` | `◈ savant · play` |
+
+Six possible states. Each one distinct. Each one useful.
+
+---
 
 ## Origin
 
-Conceived by [Attila Mora-Borbely](https://github.com/attilamora) on 2026-02-14. Third mode in the Living Mirrors system. The first two modes changed how AI sees. This one changes how AI and human relate.
+Built by someone who noticed that every AI conversation follows the same pattern: ask, answer, ask, answer. A rhythm that produces helpful output but never produces surprise.
+
+The question was: what are the actual neurobiological principles that govern what happens when two mammals enter the play circuit and start building something together? Six researchers. 300 million years of hardwired architecture. Seven principles extracted.
+
+Read the full story: [ORIGIN.md](ORIGIN.md)
+
+---
+
+## Files
+
+| File | Description |
+|------|------------|
+| [`SPEC.md`](SPEC.md) | The concise specification. Copy this into any AI. |
+| [`SPEC-FULL.md`](SPEC-FULL.md) | Full specification with research, dial mechanics, stacking, and test plan. |
+| [`principles/`](principles/) | Each principle documented individually. |
+| [`layers/`](layers/) | Each output layer documented individually. |
+| [`ORIGIN.md`](ORIGIN.md) | The story behind the specification. |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute. |
+| [`app/`](app/) | Interactive landing page. |
+
+---
 
 ## Live Demo
 
-[**livingmirrors.ai/play-mode**](https://living-mirrors.github.io/play-mode/app/)
+[**living-mirrors.github.io/play-mode**](https://living-mirrors.github.io/play-mode/app/)
 
-## Part Of
-
-[Living Mirrors](https://livingmirrors.ai) — Cognitive specifications for artificial intelligence.
+---
 
 ## License
 
-MIT
+MIT. Open source forever. The way intelligence interacts is too foundational to be proprietary.
+
+---
+
+<p align="center">
+  <em>What We Reflect</em>
+</p>
+
+<p align="center">
+Play is not the opposite of work. Play is the state in which work becomes something neither player planned. The most powerful learning system is 300 million years old. It's hardwired into every mammalian brain. We called it recess. The neuroscience calls it the engine of all creation.
+</p>
+
+<p align="center">
+  <a href="https://livingmirrors.ai"><strong>livingmirrors.ai</strong></a>
+  <br><br>
+  <em>The game worth playing is the one where both players become more than they were when they started.</em>
+</p>
