@@ -102,6 +102,22 @@ Read the full story: [ORIGIN.md](ORIGIN.md)
 
 ---
 
+## Research Foundation
+
+The specification is grounded in six independent research programs spanning 88 years of play science. The [`research/`](research/) directory contains the complete evidence base:
+
+| Document | What It Contains |
+|----------|-----------------|
+| [Framework](research/FRAMEWORK.md) | Six research programs: affective neuroscience, cultural theory, developmental psychology, play science, play theory, social/moral foundations |
+| [Synthesis](research/SYNTHESIS.md) | How independent programs converge on a unified model of play |
+| [Design Decisions](research/DESIGN-DECISIONS.md) | Every spec choice traced to specific research evidence |
+| [Reciprocity](research/RECIPROCITY.md) | Deep dive: Panksepp's 30% rule — the experimental evidence and its implications for AI interaction |
+| [13 Papers](research/papers/) | Individual summaries with full APA citations |
+
+Key sources: Panksepp (1998), Huizinga (1938), Winnicott (1971), Vygotsky (1978), Brown (2009), Sutton-Smith (1997), Pellis & Pellis (2007), Peterson (2018), Burghardt (2005), Gray (2011).
+
+---
+
 ## Files
 
 | File | Description |
@@ -110,6 +126,7 @@ Read the full story: [ORIGIN.md](ORIGIN.md)
 | [`SPEC-FULL.md`](SPEC-FULL.md) | Full specification with research, dial mechanics, stacking, and test plan. |
 | [`principles/`](principles/) | Each principle documented individually. |
 | [`layers/`](layers/) | Each output layer documented individually. |
+| [`research/`](research/) | Complete academic research archive with framework, synthesis, and 13 paper summaries. |
 | [`ORIGIN.md`](ORIGIN.md) | The story behind the specification. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute. |
 | [`app/`](app/) | Interactive landing page. |
