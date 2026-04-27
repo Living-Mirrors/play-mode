@@ -8,7 +8,6 @@
   <a href="https://github.com/Living-Mirrors/play-mode/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
   <a href="https://github.com/Living-Mirrors/play-mode/releases/tag/v1.0.0"><img src="https://img.shields.io/badge/version-1.0.0-brightgreen.svg" alt="Version 1.0.0"></a>
   <img src="https://img.shields.io/badge/maintained-yes-green.svg" alt="Maintained">
-  <a href="https://github.com/Living-Mirrors/play-mode/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="Contributions Welcome"></a>
 </p>
 
 # Play Mode
@@ -37,7 +36,7 @@ Ordered structured to free. Each principle activates as the dial rises.
 6. **Adaptive Variability** (Sutton-Smith) — Prevents rigidity. When patterns harden, play introduces variation.
 7. **Continuation Desire** (Brown) — The game sustains itself. When energy drops, new angles emerge.
 
-Individual principle docs: [`principles/`](principles/)
+Full breakdown of each principle: [`principles.md`](principles.md)
 
 ---
 
@@ -54,14 +53,14 @@ Each layer makes a different aspect of the play dynamic visible. They fade in as
 | **Wildcards** | ~70%+ | Deliberate disruption marked with ✶. The pattern was hardening. |
 | **Invitations** | ~80%+ | Your move: what if you... Scaffolds the human into leading. |
 
-Individual layer docs: [`layers/`](layers/)
+Full breakdown of each layer: [`output-layers.md`](output-layers.md)
 
 ---
 
 ## How to Use
 
 ```
-1. Open SPEC.md
+1. Open play-mode.md
 2. Copy the full contents
 3. Paste into your AI's system prompt or custom instructions
 4. Start a conversation
@@ -105,8 +104,6 @@ Built by someone who noticed that every AI conversation follows the same pattern
 
 The question was: what are the actual neurobiological principles that govern what happens when two mammals enter the play circuit and start building something together? Six researchers. 300 million years of hardwired architecture. Seven principles extracted.
 
-Read the full story: [ORIGIN.md](ORIGIN.md)
-
 ---
 
 ## Research Foundation
@@ -129,13 +126,11 @@ Key sources: Panksepp (1998), Huizinga (1938), Winnicott (1971), Vygotsky (1978)
 
 | File | Description |
 |------|------------|
-| [`SPEC.md`](SPEC.md) | The concise specification. Copy this into any AI. |
-| [`SPEC-FULL.md`](SPEC-FULL.md) | Full specification with research, dial mechanics, stacking, and test plan. |
-| [`principles/`](principles/) | Each principle documented individually. |
-| [`layers/`](layers/) | Each output layer documented individually. |
+| [`play-mode.md`](play-mode.md) | The concise specification. Copy this into any AI. |
+| [`play-mode-spec.md`](play-mode-spec.md) | Full specification with research, dial mechanics, stacking, and test plan. |
+| [`principles.md`](principles.md) | All seven principles documented in one file. |
+| [`output-layers.md`](output-layers.md) | All six output layers documented in one file. |
 | [`research/`](research/) | Complete academic research archive with framework, synthesis, and 13 paper summaries. |
-| [`ORIGIN.md`](ORIGIN.md) | The story behind the specification. |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute. |
 | [`app/`](app/) | Interactive landing page. |
 
 ---

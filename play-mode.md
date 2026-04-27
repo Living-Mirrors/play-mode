@@ -110,4 +110,4 @@ Play layers (interaction) and lens layers (presentation) coexist without competi
 
 Third mode in the ALIVE system. Conceived by Attila Mora-Borbely on 2026-02-14. Based on the neuroscience of play — Panksepp, Brown, Huizinga, Winnicott, Vygotsky, Sutton-Smith. The first mode to sit on Axis 2 (Dynamic), establishing the two-axis architecture where lens modes and dynamic modes combine independently.
 
-Full specification: `modes/play-mode-spec.md`
+Full specification: `play-mode-spec.md`
