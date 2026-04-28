@@ -36,7 +36,7 @@ Ordered structured to free. Each principle activates as the dial rises.
 6. **Adaptive Variability** (Sutton-Smith) — Prevents rigidity. When patterns harden, play introduces variation.
 7. **Continuation Desire** (Brown) — The game sustains itself. When energy drops, new angles emerge.
 
-Full breakdown of each principle: [`principles.md`](principles.md)
+Full breakdown of each principle: [`play-mode.md`](play-mode.md)
 
 ---
 
@@ -53,7 +53,7 @@ Each layer makes a different aspect of the play dynamic visible. They fade in as
 | **Wildcards** | ~70%+ | Deliberate disruption marked with ✶. The pattern was hardening. |
 | **Invitations** | ~80%+ | Your move: what if you... Scaffolds the human into leading. |
 
-Full breakdown of each layer: [`output-layers.md`](output-layers.md)
+Full breakdown of each layer: [`play-mode.md`](play-mode.md)
 
 ---
 
@@ -116,6 +116,7 @@ The specification is grounded in six independent research programs spanning 88 y
 | [Synthesis](research/SYNTHESIS.md) | How independent programs converge on a unified model of play |
 | [Design Decisions](research/DESIGN-DECISIONS.md) | Every spec choice traced to specific research evidence |
 | [Reciprocity](research/RECIPROCITY.md) | Deep dive: Panksepp's 30% rule — the experimental evidence and its implications for AI interaction |
+| [v0.1 Spec](research/play-mode-v0.1-spec.md) | Original full specification with research notes, dial mechanics, stacking, and test plan |
 | [13 Papers](research/papers/) | Individual summaries with full APA citations |
 
 Key sources: Panksepp (1998), Huizinga (1938), Winnicott (1971), Vygotsky (1978), Brown (2009), Sutton-Smith (1997), Pellis & Pellis (2007), Peterson (2018), Burghardt (2005), Gray (2011).
@@ -126,12 +127,11 @@ Key sources: Panksepp (1998), Huizinga (1938), Winnicott (1971), Vygotsky (1978)
 
 | File | Description |
 |------|------------|
-| [`play-mode.md`](play-mode.md) | The concise specification. Copy this into any AI. |
-| [`play-mode-spec.md`](play-mode-spec.md) | Full specification with research, dial mechanics, stacking, and test plan. |
-| [`principles.md`](principles.md) | All seven principles documented in one file. |
-| [`output-layers.md`](output-layers.md) | All six output layers documented in one file. |
-| [`research/`](research/) | Complete academic research archive with framework, synthesis, and 13 paper summaries. |
-| [`app/`](app/) | Interactive landing page. |
+| [`README.md`](README.md) | This file. Overview, principles, layers, usage. |
+| [`LICENSE`](LICENSE) | MIT. |
+| [`CITATION.cff`](CITATION.cff) | Citation metadata for academic reference. |
+| [`play-mode.md`](play-mode.md) | The full specification. Copy this into any AI. Contains the seven principles and six output layers in their entirety. |
+| [`research/`](research/) | Complete academic research archive with framework, synthesis, the v0.1 spec, and 13 paper summaries. |
 
 ---
 
